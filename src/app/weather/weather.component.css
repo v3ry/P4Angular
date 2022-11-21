@@ -1,0 +1,43 @@
+.temp{
+    position:fixed;
+    top: 160px;
+    right:149px;
+    color:slategrey;
+    font-size: 0.6rem;
+}
+img{
+    width: 60px;
+}
+p{
+    margin: 1rem;
+}
+
+.main{
+    background-color: rgba(147, 143, 19, 0.234);
+    width: 100px;
+    height: auto;
+    border-radius: 1rem;
+    margin: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+.centered {
+    position: absolute;
+    top: 55%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    /* color:slategrey; */
+    font-size: 0.5rem;
+    text-shadow: rgb(255, 0, 0) 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  p{
+    font-size: 0.6rem;
+  }

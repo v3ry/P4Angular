@@ -1,0 +1,31 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+
+    <div>
+        Form submitted ? {{myForm.submitted}}
+        Form valid ? {{myForm.valid}}
+        Form invalid ? {{myForm.valid}}
+      </div>
+  
+    <fieldset>
+        <label for="contact-name">Nom</label>
+        <input id="contact-name" name="contact-name" [(ngModel)]="model.name" required>
+    </fieldset>
+    
+    <fieldset>
+        <label for="quantity-mail">Email</label>
+        <input id="quantity-mail" name="quantity-mail" [(ngModel)]="model.mail" type="email" required email>
+    </fieldset>
+
+    <fieldset>
+        <label for="title-title">Titre</label>
+        <input id="title-title" name="title-title" type="text" [(ngModel)]="model.title" required maxlength="5">
+    </fieldset>
+
+  
+    <fieldset>
+        <label for="date-message">Message</label>
+        <input id="date-message" name="date-message" [(ngModel)]="model.message"  required>
+    </fieldset>
+  
+    <button type="submit">Envoyer</button>
+</form>

@@ -1,0 +1,19 @@
+<div class="historique">
+    <h4>Historique</h4>
+    <div class="acc">
+        <div>
+            <p>Bienvenue sur mon site sur la Gyroroue</p>
+            <p>Vous trouverez ici mes différentes aventure en mono roue éléctrique</p>
+        </div>
+    <img src="../../assets/gyroboy.png"/>
+    </div>
+
+    <div class="newsLoop" *ngFor="let news of news.reverse(); index as i;">
+        <div class="column">
+            <h6>{{news.date}}</h6>
+            <h5>{{news.title}}</h5>
+            <p>{{news.description}}</p>
+        </div>
+        <img *ngIf="news.picture" src={{news.picture}} alt="">
+    </div>
+</div>

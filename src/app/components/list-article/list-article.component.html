@@ -1,0 +1,32 @@
+<p>Articles List:</p>
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>date</th>
+            <th>title</th>
+            <th>description</th>
+            <th>picture</th>
+            <th>categorie</th>
+            <th>delete</th>
+            <th>update</th>
+        </tr>
+    </thead>
+    <tbody  *ngIf="news">
+        <tr  *ngFor="let article of news.reverse(); index as i;">
+            <td >{{article.id}}</td>
+            <td >{{article.date}}</td>
+            <td >{{article.title}}</td>
+            <td >{{article.description}}</td>
+            <td ><img *ngIf="article.picture" src={{article.picture}} alt="" width="50px"></td>
+            <td ><p *ngIf="article.categorie">{{article.categorie.title}}<p></td>
+            <td ><button (click)="handleDelete(article.id.toString())">Delete</button></td>
+            <td ><button>Update</button></td>
+        </tr>
+    </tbody>
+</table>
+<!-- <ul>
+    <li *ngFor="let news of news.reverse(); index as i;">
+        <p>{{news.title}}</p>
+    </li>
+</ul> -->

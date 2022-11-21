@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    
+}
+
+.main{
+    display: flex;
+    margin-bottom: 2rem;
+}

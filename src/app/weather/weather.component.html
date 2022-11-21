@@ -1,0 +1,13 @@
+<div class="main">
+    <!-- <input type="text" placeholder="ex: Lyon" name="cityName" [(ngModel)]="city" />
+    <button (click)="searchWeather()">Search</button> -->
+    <div class="weather" *ngIf="weath.weather">
+        <p>Lyon:</p>
+        <div class="container">
+            <img src={{weath.icon}} alt=""/>
+            <p class="centered">{{weath.temp}} °C</p>
+            <p>{{weath.weather[0].description}}</p>
+        </div>
+        
+    </div>
+</div>

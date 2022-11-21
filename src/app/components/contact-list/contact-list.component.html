@@ -1,0 +1,31 @@
+<p>Messages : </p>
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>mail</th>
+            <th>title</th>
+            <th>message</th>
+            <th>date</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody  *ngIf="news">
+        <tr  *ngFor="let article of news.reverse(); index as i;">
+            <td >{{article.id}}</td>
+            <td >{{article.name}}</td>
+            <td >{{article.mail}}</td>
+            <td >{{article.title}}</td>
+            <td >{{article.message}}</td>
+            <td >{{article.date}}</td>
+
+            <td ><button (click)="handleDelete(article.id.toString())">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+<!-- <ul>
+    <li *ngFor="let news of news.reverse(); index as i;">
+        <p>{{news.title}}</p>
+    </li>
+</ul> -->

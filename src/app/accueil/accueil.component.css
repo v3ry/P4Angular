@@ -1,0 +1,30 @@
+* {
+    margin: 0rem;
+}
+
+.accueil{
+    margin: 1rem;
+    background-color: rgba(147, 143, 19, 0.234);
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+p{
+    font-size: 0.7rem;
+    margin: 1rem;
+}
+img{
+    position: relative;
+    height: 90px;
+    top: 0;
+}
+.acc{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+}

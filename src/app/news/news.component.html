@@ -1,0 +1,12 @@
+<div class="news">
+    <h4>News</h4>
+
+    <div class="newsLoop" *ngFor="let news of news.reverse(); index as i;">
+        <div class="column">
+            <h6>{{news.date}}</h6>
+            <h5>{{news.title}}</h5>
+            <p>{{news.description}}</p>
+        </div>
+        <img *ngIf="news.picture" src={{news.picture}} alt="">
+    </div>
+</div>

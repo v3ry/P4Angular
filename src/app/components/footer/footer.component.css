@@ -1,0 +1,22 @@
+img{
+    height: 20px;
+    width: auto;
+}
+
+div{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    /* background-color: rgba(52, 52, 52, 0.11); */
+    backdrop-filter: blur(5px);
+}
+
+hr{
+    margin-top: 0;
+}

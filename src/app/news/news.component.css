@@ -1,0 +1,26 @@
+* {
+    margin: 1rem;
+}
+
+.news{
+    background-color: rgba(147, 143, 19, 0.234);
+    margin-top: 0rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+p{
+    font-size: 0.7rem;
+    margin-left: 2rem;
+}
+.newsLoop{
+    display: flex;
+    background-color: rgba(147, 143, 19, 0.234);
+    border-radius: 8px;
+    justify-content: space-between;
+}
+img{
+    width: 20%;
+    height:fit-content;
+    border-radius: 11px;
+}
