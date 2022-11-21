@@ -18,6 +18,7 @@ import { TodoComponent } from './page/todo/todo.component';
 import { AdminComponent } from './page/admin/admin.component';
 import { ListArticleComponent } from './components/list-article/list-article.component';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
+import { AddArticleComponent } from './components/add-article/add-article.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ContactListComponent } from './components/contact-list/contact-list.com
     AdminComponent,
     ListArticleComponent,
     ContactListComponent,
+    AddArticleComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

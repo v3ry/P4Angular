@@ -1,1 +1,45 @@
 <p>add-article works!</p>
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+
+    <!-- <div>
+        Form submitted ? {{myForm.submitted}}
+        Form valid ? {{myForm.valid}}
+        Form invalid ? {{myForm.valid}}
+      </div> -->
+  
+    <!-- <fieldset>
+        <label for="contact-date">date</label>
+        <input id="contact-date" name="contact-date" [(ngModel)]="model.date" required>
+    </fieldset>
+     -->
+    <fieldset>
+        <label for="quantity-description">description</label>
+        <input id="quantity-description" name="quantity-description" [(ngModel)]="model.description" required>
+    </fieldset>
+
+    <fieldset>
+        <label for="title-picture">picture</label>
+        <input id="title-picture" name="title-picture" type="text" [(ngModel)]="model.picture" required maxlength="5">
+    </fieldset>
+
+  
+    <fieldset>
+        <label for="title-message">title</label>
+        <input id="title-message" name="title-message" [(ngModel)]="model.title"  required>
+    </fieldset>
+
+    <fieldset>
+        <label for="categorie-message">categorie_id</label>
+        <!-- <input id="categorie-message" name="categorie-message"   required> -->
+        <select name="categorie-message" id="categorie-message" (change)="onChange()" [(ngModel)]="model2.id">
+            <option [ngValue]=1>News</option>
+            <option [ngValue]=2>Historique</option>
+            <option [ngValue]=3>To-Do</option>
+        </select>
+    </fieldset>
+    <button type="submit">Envoyer</button>
+</form>
+
+<!-- <select name="categorie-message" id="categorie-message" [(ngModel)]="selectedObject">
+    <option *ngFor="let lang of languageObjects" ngValue="lang">{{lang.name}}</option>
+</select> -->

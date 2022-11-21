@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Article } from './components/add-article/add-article.component';
 
 @Injectable({
   providedIn: 'root',
@@ -14,6 +15,11 @@ export class ArticleService {
       return this.http.get(`${this.apiUrl}/cat?cat=${categorieId}`);
     }
     return this.http.get(`${this.apiUrl}`);
+  }
+
+  postArticle(article: Article): Observable<any> {
+    console.log(article);
+    return this.http.post(`${this.apiUrl}`, article);
   }
 
   deleteArticle(id: string) {
