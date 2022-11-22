@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Article } from './components/add-article/add-article.component';
+import { Article } from '../components/add-article/add-article.component';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ArticleService {
-  apiUrl: string = 'http://localhost:8080/articles';
+  apiUrl: string = 'http://82.65.82.1:8080/articles';
   constructor(private http: HttpClient) {}
 
   getArticle(categorieId: string): Observable<any> {

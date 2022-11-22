@@ -8,12 +8,13 @@
     <img src="../../assets/gyroboy.png"/>
     </div>
 
-    <div class="newsLoop" *ngFor="let news of news.reverse(); index as i;">
+    <div class="newsLoop" *ngFor="let news of news; index as i;">
         <div class="column">
             <h6>{{news.date}}</h6>
             <h5>{{news.title}}</h5>
+            <img *ngIf="news.picture" src={{news.picture}} alt="">
             <p>{{news.description}}</p>
         </div>
-        <img *ngIf="news.picture" src={{news.picture}} alt="">
+        
     </div>
 </div>

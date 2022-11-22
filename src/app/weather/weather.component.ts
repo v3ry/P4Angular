@@ -24,7 +24,7 @@ export class WeatherComponent implements OnInit {
             'http://openweathermap.org/img/wn/' +
             weather.weather[0].icon +
             '@2x.png',
-          temp: (weather.main.temp - 273.15).toFixed(2),
+          temp: (weather.main.temp - 273.15).toFixed(1),
         };
         this.icon =
           'http://openweathermap.org/img/wn/' +

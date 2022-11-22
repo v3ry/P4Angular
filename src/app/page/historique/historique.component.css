@@ -12,6 +12,7 @@ p{
 }
 img{
     position: relative;
+    rotate: 90;
     height: 90px;
     top: 0;
 }

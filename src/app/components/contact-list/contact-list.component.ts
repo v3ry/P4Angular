@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MessageService } from '../../message.service';
+import { MessageService } from 'src/app/services/message.service';
 
 @Component({
   selector: 'app-contact-list',

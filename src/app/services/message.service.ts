@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Message } from './page/contact/contact.component';
+import { Message } from '../page/contact/contact.component';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MessageService {
-  apiUrl: string = 'http://localhost:8080/messages';
+  apiUrl: string = 'http://82.65.82.1:8080/messages';
   constructor(private http: HttpClient) {}
 
   getMessage(): Observable<any> {

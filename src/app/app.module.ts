@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -8,7 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './page/home/home.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { DarkModeToggleComponent } from './components/dark-mode-toggle/dark-mode-toggle.component';
-import { NewsComponent } from './news/news.component';
+import { NewsComponent } from './components/news/news.component';
 import { WeatherComponent } from './weather/weather.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -19,6 +18,10 @@ import { AdminComponent } from './page/admin/admin.component';
 import { ListArticleComponent } from './components/list-article/list-article.component';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
 import { AddArticleComponent } from './components/add-article/add-article.component';
+import { ToasterComponent } from './components/toaster/toaster.component';
+import { CommonModule } from '@angular/common';
+import { ToastComponent } from './components/toast/toast.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -37,8 +40,16 @@ import { AddArticleComponent } from './components/add-article/add-article.compon
     ListArticleComponent,
     ContactListComponent,
     AddArticleComponent,
+    ToasterComponent,
+    ToastComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    CommonModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
