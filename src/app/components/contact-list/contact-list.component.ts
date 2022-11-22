@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MessageService } from 'src/app/services/message.service';
+import { ToastService } from 'src/app/services/toast.service';
 
 @Component({
   selector: 'app-contact-list',
@@ -10,7 +11,11 @@ import { MessageService } from 'src/app/services/message.service';
 export class ContactListComponent implements OnInit {
   news: any = {};
   // constructor(private articleService: ArticleService) {}
-  constructor(private messageService: MessageService, private router: Router) {
+  constructor(
+    private messageService: MessageService,
+    private router: Router,
+    private toastService: ToastService
+  ) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => {
       return false;
     };
@@ -29,7 +34,7 @@ export class ContactListComponent implements OnInit {
 
   async handleDelete(id: string): Promise<void> {
     this.messageService.deleteMessage(id);
-    console.log('deletetitititit' + id);
+    this.toastService.showErrorToast('Success', 'Message effacé.');
     await this.delay(1000);
     this.router.navigateByUrl('/admin');
   }

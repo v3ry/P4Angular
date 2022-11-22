@@ -46,7 +46,7 @@ export class ToastComponent implements OnInit {
             autohide: false,
           }
         : {
-            delay: 100000,
+            delay: 5000,
           }
     );
 

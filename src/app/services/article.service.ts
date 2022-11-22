@@ -17,9 +17,18 @@ export class ArticleService {
     return this.http.get(`${this.apiUrl}`);
   }
 
+  getOneArticle(id: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}`);
+  }
+
   postArticle(article: Article): Observable<any> {
     console.log(article);
     return this.http.post(`${this.apiUrl}`, article);
+  }
+
+  putArticle(article: Article, id: number): Observable<any> {
+    console.log(article);
+    return this.http.put(`${this.apiUrl}/${id}`, article);
   }
 
   deleteArticle(id: string) {

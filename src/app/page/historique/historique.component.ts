@@ -16,4 +16,13 @@ export class HistoriqueComponent implements OnInit {
       .getArticle('2')
       .subscribe((article) => (this.news = article));
   }
+
+  showModal!: boolean;
+  show() {
+    this.showModal = true; // Show-Hide Modal Check
+  }
+  //Bootstrap Modal Close event
+  hide() {
+    this.showModal = false;
+  }
 }

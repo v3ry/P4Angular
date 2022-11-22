@@ -21,7 +21,7 @@
             <td ><img *ngIf="article.picture" src={{article.picture}} alt="" width="50px"></td>
             <td ><p *ngIf="article.categorie">{{article.categorie.title}}<p></td>
             <td ><button (click)="handleDelete(article.id.toString())">Delete</button></td>
-            <td ><button>Update</button></td>
+            <td ><a [routerLink]="['/admin/article',article.id]"><button>Update</button></a></td>
         </tr>
     </tbody>
 </table>

@@ -5,6 +5,7 @@ import { ContactComponent } from './page/contact/contact.component';
 import { HistoriqueComponent } from './page/historique/historique.component';
 import { HomeComponent } from './page/home/home.component';
 import { TodoComponent } from './page/todo/todo.component';
+import { UpdateArticleComponent } from './update-article/update-article.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'todo', component: TodoComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'admin', component: AdminComponent },
+  { path: 'admin/article/:id', component: UpdateArticleComponent },
 ];
 
 @NgModule({

@@ -1,9 +1,12 @@
+
+
 .historique{
     margin: 1rem;
     background-color: rgba(147, 143, 19, 0.234);
     margin-top: 2rem;
     border-radius: 0.5rem;
     padding: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 p{
@@ -11,12 +14,30 @@ p{
     margin: 1rem;
 }
 img{
-    position: relative;
-    rotate: 90;
-    height: 90px;
-    top: 0;
+
+    height: 150px;
+    border-radius: 11px;
 }
 .acc{
     display: flex;
     justify-content: space-around;
 }
+.group{
+    display: flex;
+    align-items: center;
+}
+
+.newsLoop{
+    margin: 1rem;
+    margin-top: 2rem;
+}
+
+.zoom:hover { 
+    /* transform: scale(3);  */
+    height: 450px;
+    position: absolute;
+    left: auto;
+    /* position: fixed;
+    top: 25%;
+    left: 30%; */
+    }

@@ -22,6 +22,7 @@ import { ToasterComponent } from './components/toaster/toaster.component';
 import { CommonModule } from '@angular/common';
 import { ToastComponent } from './components/toast/toast.component';
 import { MatIconModule } from '@angular/material/icon';
+import { UpdateArticleComponent } from './update-article/update-article.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { MatIconModule } from '@angular/material/icon';
     AddArticleComponent,
     ToasterComponent,
     ToastComponent,
+    UpdateArticleComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +51,7 @@ import { MatIconModule } from '@angular/material/icon';
     HttpClientModule,
     FormsModule,
     CommonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

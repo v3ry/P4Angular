@@ -1,16 +1,16 @@
 .success {
     background-color: #198754;
-    position:static;
-    width: 150px;
-    height: 70px;
-    border-radius: 30px;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    vertical-align:middle;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    // position:static;
+    // width: 150px;
+    // height: 70px;
+    // border-radius: 30px;
+    // top: 50%;
+    // left: 50%;
+    // text-align: center;
+    // vertical-align:middle;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-evenly;
   }
   
   .info {
@@ -23,15 +23,4 @@
   
   .error {
     background-color: #dc3545;
-    position: fixed;
-    width: 150px;
-    height: 70px;
-    border-radius: 30px;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    vertical-align:middle;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
   }

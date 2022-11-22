@@ -10,9 +10,10 @@
   /* The switch - the box around the slider */
 .switch {
     position: relative;
+    top: 6px;
     display: inline-block;
-    width: 30px;
-    height: 12px;
+    width: 40px;
+    height: 18px;
   }
   
   /* Hide default HTML checkbox */
@@ -38,8 +39,8 @@
   .slider:before {
     position: absolute;
     content: "";
-    height: 10px;
-    width: 10px;
+    height: 15px;
+    width: 15px;
     left: 4px;
     bottom: 1px;
     background-color: white;
@@ -56,11 +57,11 @@
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(13px);
-    -ms-transform: translateX(13px);
-    transform: translateX(13px);
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
   }
 
   img{
-    height: 20px;
+    height: 25px;
   }

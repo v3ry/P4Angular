@@ -1,31 +1,50 @@
-<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+<form #myForm="ngForm" (ngSubmit)="myForm.valid && onSubmit()">
 
-    <div>
+    <!-- <div>
         Form submitted ? {{myForm.submitted}}
         Form valid ? {{myForm.valid}}
         Form invalid ? {{myForm.valid}}
-      </div>
+      </div> -->
   
     <fieldset>
         <label for="contact-name">Nom</label>
-        <input id="contact-name" name="contact-name" [(ngModel)]="model.name" required>
+        <input id="contact-name" name="contact-name" type="text" [(ngModel)]="model.name" #name="ngModel" required>
     </fieldset>
+
+    <div *ngIf="name.errors">
+        <span *ngIf="name.errors?.['required'] && myForm.submitted">Le nom ou pseudo est requis</span>
+      </div>
     
     <fieldset>
         <label for="quantity-mail">Email</label>
-        <input id="quantity-mail" name="quantity-mail" [(ngModel)]="model.mail" type="email" required email>
+        <input id="quantity-mail" name="quantity-mail" [(ngModel)]="model.mail" type="email" #mail="ngModel" required email>
     </fieldset>
+
+    <div *ngIf="mail.errors">
+        <span *ngIf="mail.errors?.['required'] && myForm.submitted">Le mail est requis</span>
+        <span *ngIf="mail.errors?.['email'] && myForm.submitted">Le mail est incorecte</span>
+      </div>
 
     <fieldset>
         <label for="title-title">Titre</label>
-        <input id="title-title" name="title-title" type="text" [(ngModel)]="model.title" required>
+        <input id="title-title" name="title-title" type="text" [(ngModel)]="model.title" #title="ngModel" required>
     </fieldset>
+
+    <div *ngIf="title.errors">
+        <span *ngIf="title.errors?.['required'] && myForm.submitted">Le titre est requis</span>
+
+      </div>
 
   
     <fieldset>
         <label for="date-message">Message</label>
-        <input id="date-message" name="date-message" [(ngModel)]="model.message"  required>
+        <textarea id="date-message" class="message" name="date-message" type="textBox" #message="ngModel" [(ngModel)]="model.message"  required></textarea>
     </fieldset>
   
-    <button type="submit">Envoyer</button>
+    <div *ngIf="message.errors">
+        <span *ngIf="message.errors?.['required'] && myForm.submitted">Le message est requis</span>
+
+      </div>
+
+    <button id="form_button" type="submit">Envoyer</button>
 </form>
