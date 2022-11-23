@@ -33,3 +33,9 @@ app-dark-mode-toggle{
     top: 1rem;
     right: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+    img{
+        left:42%
+    }
+}

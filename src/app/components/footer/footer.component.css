@@ -21,3 +21,9 @@ footer{
 hr{
     margin: 3px 0 ;
 }
+
+app-dark-mode-toggle{
+    position: relative;
+    left: -40px;
+}
+

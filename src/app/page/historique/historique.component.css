@@ -3,14 +3,14 @@
 .historique{
     margin: 1rem;
     background-color: rgba(147, 143, 19, 0.234);
-    margin-top: 2rem;
+    margin-top: 3rem;
     border-radius: 0.5rem;
     padding: 0.5rem;
     margin-bottom: 2rem;
 }
 
 p{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin: 1rem;
 }
 img{
@@ -40,4 +40,11 @@ img{
     /* position: fixed;
     top: 25%;
     left: 30%; */
+    }
+    @media screen and (max-width:700px){
+        .group, .acc{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
     }

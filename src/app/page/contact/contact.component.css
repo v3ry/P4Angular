@@ -45,7 +45,7 @@ textarea {
 
 form {
   padding: 0 37.5px;
-  margin: 30px 0;
+  margin-top: 3rem;
   width: 100%;
   text-align: center;
 }
@@ -56,7 +56,7 @@ h1 {
   font-weight: 700;
   letter-spacing: 7px;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .underline {
@@ -88,13 +88,13 @@ input[type='text'], [type='email'], select, textarea {
   border: none;
   border-radius: 11px;
 	border-bottom: solid 2px #474544;
-	color: #474544;
+	color: #959291;
 	font-size: 1.000em;
   font-weight: 400;
   letter-spacing: 1px;
 	margin: 0em 0 1em 0;
 	padding: 0 0 0.875em 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 	width: 100%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;

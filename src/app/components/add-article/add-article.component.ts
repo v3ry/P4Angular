@@ -17,7 +17,9 @@ export class AddArticleComponent implements OnInit {
     };
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.model.categorie.id = 1;
+  }
 
   delay(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));

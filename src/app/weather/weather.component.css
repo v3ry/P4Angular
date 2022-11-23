@@ -3,7 +3,7 @@
     top: 160px;
     right:149px;
     color:slategrey;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
 }
 img{
     width: 60px;
@@ -24,7 +24,7 @@ p{
 .container {
     position: relative;
     text-align: center;
-    color: white;
+    color: rgb(118, 118, 118);
   }
 .centered {
     position: absolute;
@@ -33,11 +33,11 @@ p{
     transform: translate(-50%, -50%);
     margin: 0;
     /* color:slategrey; */
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     text-shadow: rgb(255, 0, 0) 0px 0px 1px;
     -webkit-font-smoothing: antialiased;
   }
 
   p{
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }

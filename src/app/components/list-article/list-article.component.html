@@ -1,4 +1,5 @@
 <p>Articles List:</p>
+<div>
 <table>
     <thead>
         <tr>
@@ -25,8 +26,6 @@
         </tr>
     </tbody>
 </table>
-<!-- <ul>
-    <li *ngFor="let news of news.reverse(); index as i;">
-        <p>{{news.title}}</p>
-    </li>
-</ul> -->
+
+<a [routerLink]="['/admin']"><button class="btn btn-warning">Retour</button></a>
+</div>
