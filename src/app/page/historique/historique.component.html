@@ -1,4 +1,4 @@
-<div class="historique">
+<div class="historique" *ngIf="news[0]">
     <h4>Historique</h4>
     <div class="acc">
         <img src="https://c.tenor.com/2vT3mS0xY0EAAAAC/larsbarst-euc.gif"/>
@@ -14,8 +14,15 @@
             <h6>{{news.date}}</h6>
             <h5>{{news.title}}</h5>
             <div class="group">
-                <img *ngIf="news.picture" src={{news.picture}} alt="" class="zoom">
+                <img *ngIf = "(news.picture | typeof) === 'string'" src={{news.picture}} alt="" class="zoom">
+                <img *ngIf = "(news.picture | typeof) === 'object'" src={{news.picture[0]}} alt="" class="zoom">
                 <p>{{news.description}}</p>
+            </div>
+            <div class="imagesZone" *ngIf = "(news.picture | typeof) === 'object'">
+                <div  *ngFor="let img  of news.picture;index as i">
+                <img *ngIf="i >= 1" src={{news.picture[i]}} alt="" class="zoom" />
+                </div>
+                <!-- <td ><img  src={{news.picture[1]}} alt="" width="50px"></td> -->
             </div>
         </div>
         

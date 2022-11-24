@@ -23,6 +23,7 @@ import { CommonModule } from '@angular/common';
 import { ToastComponent } from './components/toast/toast.component';
 import { MatIconModule } from '@angular/material/icon';
 import { UpdateArticleComponent } from './update-article/update-article.component';
+import { TypeofPipe } from './components/list-article/pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { UpdateArticleComponent } from './update-article/update-article.componen
     ToasterComponent,
     ToastComponent,
     UpdateArticleComponent,
+    TypeofPipe,
   ],
   imports: [
     BrowserModule,

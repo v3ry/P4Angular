@@ -23,7 +23,7 @@ export class ContactListComponent implements OnInit {
 
   ngOnInit(): void {
     this.messageService.getMessage().subscribe((article) => {
-      this.news = article;
+      this.news = article.reverse();
       console.log(this.news);
     });
   }

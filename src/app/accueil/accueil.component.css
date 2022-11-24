@@ -29,6 +29,9 @@ img{
     display: flex;
     justify-content: space-between;
 }
+iframe{
+    border-radius: 11px;
+}
 
 @media screen and (max-width:700px){
     .acc{

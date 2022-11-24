@@ -3,4 +3,7 @@
 
 <a [routerLink]="['/admin/articlelist']"><button class="btn btn-info">Article List</button></a>
 
+<p>{{adminStored}}</p>
 <app-contact-list></app-contact-list>
+<p>Admin Pass</p>
+<input type="text" name="" id="" [(ngModel)]="adminPass" (change)="handleInput()">

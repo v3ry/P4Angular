@@ -35,12 +35,20 @@ img{
 .zoom:hover { 
     /* transform: scale(3);  */
     height: 450px;
-    position: absolute;
-    left: auto;
+    position: fixed;
+    top: 25%;
+    left: 10%;
     /* position: fixed;
     top: 25%;
     left: 30%; */
     }
+
+.imagesZone{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
     @media screen and (max-width:700px){
         .group, .acc{
             display: flex;

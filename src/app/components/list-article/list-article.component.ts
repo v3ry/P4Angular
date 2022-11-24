@@ -9,6 +9,7 @@ import { ArticleService } from 'src/app/services/article.service';
 })
 export class ListArticleComponent implements OnInit {
   news: any = {};
+
   // constructor(private articleService: ArticleService) {}
   constructor(private articleService: ArticleService, private router: Router) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => {
@@ -18,8 +19,17 @@ export class ListArticleComponent implements OnInit {
 
   ngOnInit(): void {
     this.articleService.getArticle('0').subscribe((article) => {
-      this.news = article;
-      console.log(this.news);
+      this.news = article.reverse();
+
+      for (let index = 0; index < this.news.length; index++) {
+        this.news[index].picture = this.news[index].picture
+          .toString()
+          .split('|');
+      }
+
+      console.log(this.news[0]);
+      console.log(typeof this.news[0].picture);
+      console.log(typeof this.news[1].picture);
     });
   }
 

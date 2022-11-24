@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Article } from '../components/add-article/add-article.component';
@@ -8,6 +8,7 @@ import { Article } from '../components/add-article/add-article.component';
 })
 export class ArticleService {
   apiUrl: string = 'http://82.65.82.1:8080/articles';
+
   constructor(private http: HttpClient) {}
 
   getArticle(categorieId: string): Observable<any> {
@@ -22,23 +23,37 @@ export class ArticleService {
   }
 
   postArticle(article: Article): Observable<any> {
+    let adminStored: string = localStorage.getItem('pass') || '';
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: adminStored,
+    });
+    let options = { headers: headers };
     console.log(article);
-    return this.http.post(`${this.apiUrl}`, article);
+    return this.http.post(`${this.apiUrl}`, article, options);
   }
 
   putArticle(article: Article, id: number): Observable<any> {
+    let adminStored: string = localStorage.getItem('pass') || '';
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: adminStored,
+    });
+    let options = { headers: headers };
     console.log(article);
-    return this.http.put(`${this.apiUrl}/${id}`, article);
+    return this.http.put(`${this.apiUrl}/${id}`, article, options);
   }
 
   deleteArticle(id: string) {
-    //   const options = {
-    //     headers: this._headers,
-    //     body: JSON.stringify(user)
-    //  };
-    console.log(`${this.apiUrl}/${id}`);
+    let adminStored: string = localStorage.getItem('pass') || '';
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: adminStored,
+    });
+    let options = { headers: headers };
+
     this.http
-      .delete(`${this.apiUrl}/${id}`)
+      .delete(`${this.apiUrl}/${id}`, options)
       .subscribe(() => console.log('Delete successful'));
   }
 }

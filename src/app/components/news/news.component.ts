@@ -12,8 +12,9 @@ export class NewsComponent implements OnInit {
   constructor(private articleService: ArticleService) {}
 
   ngOnInit(): void {
-    this.articleService
-      .getArticle('1')
-      .subscribe((article) => (this.news = article));
+    this.articleService.getArticle('1').subscribe((article) => {
+      this.news = article.reverse();
+      console.log(this.news);
+    });
   }
 }

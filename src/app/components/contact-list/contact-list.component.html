@@ -1,5 +1,5 @@
 <p>Messages : </p>
-<table>
+<table *ngIf="news[0]">
     <thead>
         <tr>
             <th>id</th>
@@ -11,8 +11,8 @@
             <th>delete</th>
         </tr>
     </thead>
-    <tbody  *ngIf="news">
-        <tr  *ngFor="let article of news.reverse(); index as i;">
+    <tbody  >
+        <tr  *ngFor="let article of news; index as i;">
             <td >{{article.id}}</td>
             <td >{{article.name}}</td>
             <td >{{article.mail}}</td>
